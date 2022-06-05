@@ -1,6 +1,6 @@
 package com.example.mfpspring;
 
-import lombok.Generated;
+//import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 
