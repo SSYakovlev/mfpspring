@@ -22,12 +22,12 @@ public class MainController {
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
     }
-
+  
     @PostMapping("/posts")
     public Post createPost(@RequestBody Post post) {
         return postRepository.save(post);
     }
-
+  
     @GetMapping(path = "/posts/{postId}")
     public Post getPost(Long postId) {
         return postRepository.findPostById(postId);
@@ -36,6 +36,9 @@ public class MainController {
     @DeleteMapping("/posts/{postId}")
     public String deletePost(Long postId) {
         //In this place I figherred all fashists
+
+    @DeleteMapping("/posts/{postId}")
+    public String deletePost(Long postId) {
         postRepository.deleteById(postId);
         return "Delete operation is finished successfully";
     }
